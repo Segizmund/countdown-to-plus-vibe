@@ -23,6 +23,7 @@
 }
 
 .circles li{
+    padding: 0 !important;
     font-weight: bold;
     color: #DC5F00;
     position: absolute;

@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const hours = Math.floor(diff / 1000 / 60 / 60);
         const minutes = Math.floor(diff / 1000 / 60) % 60;
         const seconds = Math.floor(diff / 1000) % 60;
-
+        if (diff <= 0) {
+            // останавливаем таймер timerId
+            clearInterval(timerId);
+        }
         $hours.textContent = hours < 10 ? '0' + hours : hours;
         $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;

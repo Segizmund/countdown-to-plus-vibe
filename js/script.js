@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Устанавливаем конечное время 16:00 дня
     const endTime = new Date();
-    endTime.setHours(16, 0, 0, 0);
+    endTime.setHours(15, 0, 0, 0);
 
 // id таймера
     let timerId = null;
@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentTime.getDay() === 0 || currentTime.getDay() === 6) {
             return;
         }
-        if (currentTime.getHours() >= 16) {
+        if (currentTime.getHours() >= 15) {
+            let timer = document.querySelector('.timer').style.display = 'none';
+            let message = document.querySelector('.content').classList.remove('d-none');
             clearInterval(timerId);
             return;
         }

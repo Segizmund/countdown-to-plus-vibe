@@ -139,17 +139,6 @@ body{
     --color-quaternary: #f07a6a;
     --color-quinary: #ee6352;
 }
-body {
-    min-height: 100vh;
-    font-family: canada-type-gibson, sans-serif;
-    font-weight: 300;
-    font-size: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #eff8e2;
-}
 .content {
     display: flex;
     align-content: center;

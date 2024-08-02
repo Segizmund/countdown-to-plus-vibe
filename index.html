@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка + Вайба</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<body>
+<div>
+    <div id="container">
+        <span id="text1"></span>
+        <span id="text2"></span>
+    </div>
+
+    <svg id="filters">
+        <defs>
+            <filter id="threshold">
+                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 255 -140" />
+            </filter>
+        </defs>
+    </svg>
+</div>
+<div id="message"></div>
+
+<div class="timer">
+    <div class="timer__items">
+        <div class="timer__item timer__days">00</div>
+        <div class="timer__item timer__hours">00</div>
+        <div class="timer__item timer__minutes">00</div>
+        <div class="timer__item timer__seconds">00</div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+<script>
+    function displayMessage() {
+        let currentTime = new Date();
+        let hours = currentTime.getHours();
+        let minutes = currentTime.getMinutes();
+
+        if (hours === 10 && minutes === 0) {
+            document.getElementById('message').innerHTML = 'Сообщение для 16:00';
+        }
+    }
+
+    setInterval(displayMessage, 1000);
+</script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <title>Проверка + Вайба</title>
 </head>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/anim-bg.css">
 <body>
 <div>
     <div id="container">
@@ -23,8 +24,10 @@
         </defs>
     </svg>
 </div>
-<div id="message"></div>
 
+<div class="main">
+
+<div id="message"></div>
 <div class="timer">
     <div class="timer__items">
         <div class="timer__item timer__days">00</div>
@@ -33,6 +36,21 @@
         <div class="timer__item timer__seconds">00</div>
     </div>
 </div>
+</div>
+<div class="area">
+    <ul class="circles">
+        <li class="Z1" style="font-size: 80px;">Z</li>
+        <li class="Z2" style="font-size: 15px;">Z</li>
+        <li class="Z3" style="font-size: 20px;">Z</li>
+        <li class="Z4" style="font-size: 60px;">Z</li>
+        <li class="Z5" style="font-size: 20px;">Z</li>
+        <li class="Z6" style="font-size: 110px;">Z</li>
+        <li class="Z7" style="font-size: 140px;">Z</li>
+        <li class="Z8" style="font-size: 25px;">Z</li>
+        <li class="Z9" style="font-size: 15px;">Z</li>
+        <li class="Z10" style="font-size: 150px;">Z</li>
+    </ul>
+</div>
 <script src="js/script.js"></script>
 <script>
     function displayMessage() {
@@ -40,7 +58,7 @@
         let hours = currentTime.getHours();
         let minutes = currentTime.getMinutes();
 
-        if (hours === 10 && minutes === 0) {
+        if (hours === 16 && minutes === 0) {
             document.getElementById('message').innerHTML = 'Сообщение для 16:00';
         }
     }
